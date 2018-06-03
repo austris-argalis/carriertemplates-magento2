@@ -7,7 +7,7 @@
 namespace Davay\CarrierTemplates\Test\Integration\Model\Config\TemplateClone;
 
 use Magento\TestFramework\ObjectManager;
-use PHPUnit\Framework\TestCase;
+use Magento\TestFramework\TestCase\AbstractIntegrity as TestCase;
 
 class CarrierTest extends TestCase
 {

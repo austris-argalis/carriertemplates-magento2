@@ -8,11 +8,13 @@ namespace Davay\CarrierTemplates\Test\Unit\Model\Order\Email\Container;
 
 use Davay\CarrierTemplates\Model\Order\Email\Container\ExtendedShipmentIdentity;
 use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
-use PHPUnit\Framework\TestCase;
+use Magento\TestFramework\TestCase\AbstractIntegrity as TestCase;
 
 class ExtendedShipmentIdentityTest extends TestCase
 {
-
+    /**
+     * @var ObjectManager
+     */
     private $objectManager;
 
     protected function setUp()

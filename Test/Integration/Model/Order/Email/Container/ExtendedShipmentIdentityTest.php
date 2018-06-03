@@ -9,7 +9,7 @@ namespace Davay\CarrierTemplates\Test\Integration\Model\Order\Email\Container;
 use Davay\CarrierTemplates\Model\Order\Email\Container\ExtendedShipmentIdentity;
 use Magento\Sales\Model\Order\Email\Container\ShipmentIdentity;
 use Magento\TestFramework\ObjectManager;
-use PHPUnit\Framework\TestCase;
+use Magento\TestFramework\TestCase\AbstractIntegrity as TestCase;
 
 class ExtendedShipmentIdentityTest extends TestCase
 {
@@ -37,7 +37,9 @@ class ExtendedShipmentIdentityTest extends TestCase
 
     public function testReturnsCustomIdWhenOneConfigured()
     {
-        $mockConfig = $this->createMock(\Davay\CarrierTemplates\Model\MethodTemplateConfig::class);
+        $mockConfig = $this->getMockBuilder(\Davay\CarrierTemplates\Model\MethodTemplateConfig::class)
+            ->disableOriginalConstructor()
+            ->getMock();
 
         $shipmentIdentity = $this->objectManager->create(ExtendedShipmentIdentity::class, [
             'templateConfig' => $mockConfig
@@ -52,7 +54,9 @@ class ExtendedShipmentIdentityTest extends TestCase
 
     public function testUsesDefaultWhenCustomNotSet()
     {
-        $mockConfig = $this->createMock(\Davay\CarrierTemplates\Model\MethodTemplateConfig::class);
+        $mockConfig = $this->getMockBuilder(\Davay\CarrierTemplates\Model\MethodTemplateConfig::class)
+            ->disableOriginalConstructor()
+            ->getMock();
 
         /* @var ExtendedShipmentIdentity $shipmentIdentity */
         $shipmentIdentity = $this->objectManager->create(ExtendedShipmentIdentity::class, [

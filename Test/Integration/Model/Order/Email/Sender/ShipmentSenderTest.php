@@ -12,7 +12,7 @@ use Magento\Sales\Model\Order\Email\Container\ShipmentIdentity;
 use Magento\Sales\Model\Order\Email\Sender\ShipmentSender;
 use Magento\Sales\Model\Order\Email\SenderBuilderFactory;
 use Magento\TestFramework\ObjectManager;
-use PHPUnit\Framework\TestCase;
+use Magento\TestFramework\TestCase\AbstractIntegrity as TestCase;
 
 class ShipmentSenderTest extends TestCase
 {

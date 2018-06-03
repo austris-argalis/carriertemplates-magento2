@@ -6,8 +6,8 @@
 
 namespace Davay\CarrierTemplates\Test\Integration\Model;
 
-use Magento\Framework\App\ObjectManager;
-use PHPUnit\Framework\TestCase;
+use Magento\TestFramework\ObjectManager;
+use Magento\TestFramework\TestCase\AbstractIntegrity as TestCase;
 
 class MethodTemplateConfigTest extends TestCase
 {
