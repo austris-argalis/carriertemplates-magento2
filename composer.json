@@ -3,7 +3,6 @@
   "description": "Magento 2 module that will let merchant configure a separate e-mail template for each of the active carriers",
   "keywords": ["magento2", "shipment", "email", "templates"],
   "type": "magento2-module",
-  "version": "0.1.0",
   "license": "MIT",
   "repositories": [
     {

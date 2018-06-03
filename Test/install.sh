@@ -6,7 +6,7 @@ MODULE_DIR="${BUILD_DIR}/app/code/Davay/CarrierTemplates"
 echo "Install Magento ${MAGENTO_VERSION}"
 composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition:$MAGENTO_VERSION $BUILD_DIR
 
-# move module into vendor folder of magento installation
+# move module into magento installation
 mkdir -p $MODULE_DIR
 mv ./* $MODULE_DIR
 

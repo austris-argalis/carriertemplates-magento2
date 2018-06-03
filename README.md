@@ -10,6 +10,9 @@ The selected template then will be used for shipment emails for this carriers sh
 
 ## Installation
 - Nothing special, just install source and configure in admin
+```
+composer require davay/carriertemplates
+```
 
 ![Image With admin configuration](https://www.dropbox.com/s/0nywpengw819wbc/img.png?raw=1)
 
