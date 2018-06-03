@@ -1,6 +1,5 @@
 sudo: required
 dist: trusty
-group: edge
 addons:
   apt:
     packages:
@@ -11,11 +10,20 @@ addons:
       - magento2.travis
 language: php
 php:
-  - 7.1
+ - 7.0
+ - 7.1
 
 env:
   matrix:
     - MAGENTO_VERSION=2.2.4
+    - MAGENTO_VERSION=2.1.*
+
+matrix:
+  exclude:
+    - php: 7.0
+      env: MAGENTO_VERSION=2.2.4
+    - php: 7.1
+      env: MAGENTO_VERSION=2.1.*
 
 cache:
   apt: true
@@ -24,4 +32,4 @@ cache:
 
 install: sh ./Test/install.sh
 script:
-  - phpunit -c /tmp/magento2/dev/tests/integration/phpunit.xml.dist /tmp/magento2/app/code/Davay/CarrierTemplates
+  - /tmp/magento2/vendor/bin/phpunit -c /tmp/magento2/dev/tests/integration/phpunit.xml.dist /tmp/magento2/app/code/Davay/CarrierTemplates
